@@ -179,6 +179,8 @@ export default {
 
 .tags-li.active {
     color: #fff;
+    background: #409EFF;
+    border: 1px solid #409EFF;
 }
 
 .tags-li-title {

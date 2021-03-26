@@ -121,12 +121,16 @@ export default {
     height: 70px;
     font-size: 22px;
     color: #fff;
+    background: #409EFF;
 }
 .collapse-btn {
     float: left;
     padding: 0 21px;
     cursor: pointer;
     line-height: 70px;
+}
+>>> .collapse-btn:hover{
+    background: #409EFF;
 }
 .header .logo {
     float: left;
