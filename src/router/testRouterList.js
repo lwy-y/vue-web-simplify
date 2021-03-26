@@ -10,71 +10,77 @@ const list = [
         children: [
             {
                 path: '/dashboard',
-                component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Dashboard.vue'),
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/dashboard/dashboard.vue'),
                 meta: { title: '系统首页' }
             },
+            // 系统管理模块 s
             {
-                path: '/icon',
-                component: () => import(/* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
-                meta: { title: '自定义图标' }
+                path: '/roleManagement',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/systemManagement/roleManagement/roleManagement.vue'),
+                meta: { title: '角色管理' }
             },
             {
-                path: '/table',
-                component: () => import(/* webpackChunkName: "table" */ '../components/page/BaseTable.vue'),
-                meta: { title: '基础表格' }
+                path: '/userManagement',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/systemManagement/userManagement/userManagement.vue'),
+                meta: { title: '用户管理' }
             },
             {
-                path: '/tabs',
-                component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
-                meta: { title: 'tab选项卡' }
+                path: '/projectManagement',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/systemManagement/projectManagement/projectManagement.vue'),
+                meta: { title: '项目管理' }
             },
             {
-                path: '/form',
-                component: () => import(/* webpackChunkName: "form" */ '../components/page/BaseForm.vue'),
-                meta: { title: '基本表单' }
+                path: '/dictionaryManagement',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/systemManagement/dictionaryManagement/dictionaryManagement.vue'),
+                meta: { title: '字典管理' }
             },
             {
-                // 富文本编辑器组件
-                path: '/editor',
-                component: () => import(/* webpackChunkName: "editor" */ '../components/page/VueEditor.vue'),
-                meta: { title: '富文本编辑器' }
+                path: '/operationManagement',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/systemManagement/operationManagement/operationManagement.vue'),
+                meta: { title: '操作日志管理' }
+            },
+            // 系统管理模块 e
+            // 日报管理模块 s
+            {
+                path: '/logoList',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/logoManagement/logoList/logoList.vue'),
+                meta: { title: '日报列表' }
             },
             {
-                // markdown组件
-                path: '/markdown',
-                component: () => import(/* webpackChunkName: "markdown" */ '../components/page/Markdown.vue'),
-                meta: { title: 'markdown编辑器' }
+                path: '/logoOpenSetting',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/logoManagement/logoOpenSetting/logoOpenSetting.vue'),
+                meta: { title: '发送设置' }
             },
             {
-                // 图片上传组件
-                path: '/upload',
-                component: () => import(/* webpackChunkName: "upload" */ '../components/page/Upload.vue'),
-                meta: { title: '文件上传' }
+                path: '/logoReceivingSet',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/logoManagement/logoReceivingSet/logoReceivingSet.vue'),
+                meta: { title: '接收设置' }
             },
             {
-                // vue-schart组件
-                path: '/charts',
-                component: () => import(/* webpackChunkName: "chart" */ '../components/page/BaseCharts.vue'),
-                meta: { title: 'schart图表' }
+                path: '/logoExport',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/logoManagement/logoExport/logoExport.vue'),
+                meta: { title: '通知导出' }
+            },
+            // 日报管理模块 e
+            // 工作日报 s
+            {
+                path: '/workLogoAdd',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/dailyWorkReport/workLogoAdd/workLogoAdd.vue'),
+                meta: { title: '日报填报' }
             },
             {
-                // 拖拽列表组件
-                path: '/drag',
-                component: () => import(/* webpackChunkName: "drag" */ '../components/page/DragList.vue'),
-                meta: { title: '拖拽列表' }
+                path: '/workLogoSee',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/dailyWorkReport/workLogoSee/workLogoSee.vue'),
+                meta: { title: '日报查看' }
             },
+            // 工作日报 e
+            // 权限管理 s
             {
-                // 拖拽Dialog组件
-                path: '/dialog',
-                component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/DragDialog.vue'),
-                meta: { title: '拖拽弹框' }
+                path: '/personalRights',
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/admin/userAdmin/personalRights/personalRights.vue'),
+                meta: { title: '个人权限' }
             },
-            {
-                // 国际化组件
-                path: '/i18n',
-                component: () => import(/* webpackChunkName: "i18n" */ '../components/page/I18n.vue'),
-                meta: { title: '国际化' }
-            },
+            // 权限管理 e
             {
                 // 权限页面
                 path: '/permission',
@@ -91,11 +97,6 @@ const list = [
                 component: () => import(/* webpackChunkName: "403" */ '../components/page/403.vue'),
                 meta: { title: '403' }
             },
-            {
-                path: '/donate',
-                component: () => import(/* webpackChunkName: "donate" */ '../components/page/Donate.vue'),
-                meta: { title: '支持作者' }
-            }
         ]
     },
     {
