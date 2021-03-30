@@ -32,6 +32,7 @@
                   v-for="(threeItem,i) in subItem.subs"
                   :key="i"
                   :index="threeItem.index"
+                  class="tit-bg"
                 >{{ threeItem.title }}</el-menu-item>
               </el-submenu>
               <el-menu-item
@@ -106,4 +107,7 @@ export default {
 >>> .el-submenu__title:hover {
     background-color: #ecf5ff !important;
 }
+/* >>> li .el-menu-item .is-active{
+    background-color: #ecf5ff !important;
+} */
 </style>
